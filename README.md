@@ -1,10 +1,12 @@
+[https://apify.com/epctex/reddit-scraper](https://apify.com/epctex/reddit-scraper?fpr=yhdrb)
+
 # Actor - Reddit Scraper
 
 ## Reddit scraper
 
 Reddit, the popular social media platform, is home to a vast array of discussions, communities, and user-generated content. From thought-provoking discussions to entertaining memes, Reddit offers a wealth of information and engagement. However, extracting data from Reddit programmatically can be a complex task due to the platform's structure and limitations.
 
-Introducing our Reddit scraper, a versatile tool designed to extract valuable data from Reddit effortlessly. Our scraper has the capability to fetch posts, subreddits, comments, and user information, enabling you to access and analyze the content and interactions happening on Reddit.
+Introducing our Reddit scraper, a versatile tool designed to extract valuable data from Reddit effortlessly. Our scraper can fetch posts, subreddits, comments, and user information, enabling you to access and analyze the content and interactions happening on Reddit.
 
 Since Reddit's official API can be prohibitively expensive to use for many individuals and organizations, our super-fast scraper provides an affordable solution for fetching Reddit data without breaking the bank.
 
@@ -24,7 +26,7 @@ The Reddit data scraper supports the following features:
 
 -   **Scrape any post** - Our scraper gives you the flexibility to fetch any specific post of your choice. Simply provide the URL of the desired post, and our scraper will extract the content, comments, and other associated data for your analysis.
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/reddit-scraper/issues).
 
@@ -33,11 +35,11 @@ This scraper is under active development. If you have any feature requests you c
 
 The input of this scraper should be JSON containing the list of pages on Reddit that should be visited. Required fields are:
 
-- `search`: (Optional) (String) Keyword that you want to search on XXXXX.
+- `search`: (Optional) (String) Keyword that you want to search on Reddit.
 
-- `startUrls`: (Optional) (Array) List of Reddit URLs. You should only provide news list, jobs list or detail URLs.
+- `startUrls`: (Optional) (Array) List of Reddit URLs. You should only provide a news list, jobs list, or detailed URLs.
 
-- `searchMode`: (Optional) (String) Type of search do you want to make at Reddit. (`Posts`, `Communities`, `People`)
+- `searchMode`: (Optional) (String) Type of search you want to make at Reddit. (`Posts`, `Communities`, `People`)
 
 - `sort`: (Optional) (String) Specifies how you want to sort your results. (`Relevance`, `Hot`, `Top`, `New`, `Most Comments`)
 
@@ -45,29 +47,29 @@ The input of this scraper should be JSON containing the list of pages on Reddit 
 
 - `includeComments`: (Optional) (Boolean) Specifies whether to include comments or not within the posts.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
 ### Tip
 
-When you want to have a scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
+When you want to scrape over a specific list URL, just copy and paste the link as one of the **startUrl**.
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detail requests. If actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.03-0.05 compute units.
+The actor is optimized to run blazing fast and scrape as many items as possible. Therefore, it forefronts all the detailed requests. If the actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.03-0.05 compute units.
 
 ### Reddit Scraper Input example
 
@@ -121,17 +123,17 @@ The actor optimized to run blazing fast and scrape as many items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## Reddit Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this XXXXX actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Reddit actor.
 
 ## Scraped Reddit Properties
 
-The structure of each item in Reddit looks like this:
+The structure of each item on Reddit looks like this:
 
 ### Community
 
@@ -360,4 +362,4 @@ The structure of each item in Reddit looks like this:
 ```
 
 ## Contact 
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
